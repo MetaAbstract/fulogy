@@ -1,0 +1,24 @@
+.hamburger, .hamburger--open {
+  display: inline-block;
+  cursor: pointer;
+  color: var(--text-color-light);
+}
+
+.hamburger__bar-top, .hamburger__bar-middle, .hamburger__bar-bottom {
+  width: 1.5rem;
+  height: 0.2rem;
+  background-color: var(--text-color-light);
+  transition: 0.4s;
+}
+.hamburger__bar-top,.hamburger__bar-middle{
+  margin-bottom: 0.2rem;
+}
+.hamburger--open .hamburger__bar-top {
+  transform: translateY(0.4rem) rotate(-45deg);
+}
+
+.hamburger--open .hamburger__bar-middle {opacity: 0;}
+
+.hamburger--open .hamburger__bar-bottom {
+  transform: translateY(-0.4rem) rotate(45deg);
+}

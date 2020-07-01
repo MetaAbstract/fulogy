@@ -1,0 +1,37 @@
+.header {
+  background-color: black;
+  padding: 1rem;
+  height: var(--header-height);
+}
+.header__logo {
+  display: inline-block;
+  height: 1rem;
+  transform: scale(2);
+  margin-left: 2rem;
+}
+.header__cart {
+  float: right;
+}
+.cart{
+  display: inline-block;
+  position:relative;
+}
+.cart_image {
+  display: inline-block;
+  height: 1rem;
+}
+.cart__quantity {
+  color: white;
+  background-color: var(--blue-color);
+  border-radius: 50%;
+  line-height: 1rem;
+  position: absolute;
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  font-size: 0.7rem;
+  text-align: center;
+  /* в верхний правый угол */
+  top:-0.5rem;
+  right: -0.5rem;
+}

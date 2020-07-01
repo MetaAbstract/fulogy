@@ -1,0 +1,91 @@
+.menu {
+  float: right;
+  margin-left: 3rem;
+}
+.menu__list {
+  background-color: black;
+  /* header до самого низа от header*/
+  top: var(--header-height);
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  /* z-index: -1; */
+
+}
+.menu__list--init {
+  opacity: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+.menu__list--closed {
+  animation-duration: 0.4s;
+  animation-name: menu-close;
+  animation-fill-mode: forwards;  
+}
+.menu__list--open {
+  animation-duration: 0.4s;
+  animation-name: menu-open;  
+  animation-fill-mode: forwards;  
+}
+@keyframes menu-open {
+  0% {
+    z-index:2;
+    opacity: 0;
+  }
+  25% {
+    z-index:2;
+    opacity: 0.25;
+  }
+  75% {
+    z-index:2;
+    opacity: 0.75;
+  }
+  100% {
+    z-index:2;
+    opacity: 1;
+  }
+}
+@keyframes menu-close {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+.menu__list-item {
+  border-top: 1px solid gray;
+  flex-grow: 1;
+  text-align: center;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  white-space: nowrap;
+  /* выровним по центру текст ссылки */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.menu__list-item:visited {
+  color: white;
+  text-decoration: none;
+}
+.menu__list-item:active {
+  color: white;
+  text-decoration: none;
+}
+.menu__list-item:hover {
+  background-color: var(--blue-color);
+}
